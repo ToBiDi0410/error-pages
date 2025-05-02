@@ -29,6 +29,8 @@ jobs:
 
     # Build the error pages using Parcel
     - name: Build error pages
+      env:
+        PARCEL_WORKER_BACKEND: process
       run: npm run build
 
     # Deploy to GitHub Pages
