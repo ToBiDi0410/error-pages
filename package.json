@@ -3,10 +3,10 @@
   "version": "1.0.0",
   "description": "",
   "source": [
-    "src/400.pug",
-    "src/401.pug",
-    "src/404.pug",
-    "src/502.pug"
+    "src/http-400.pug",
+    "src/http-401.pug",
+    "src/http-404.pug",
+    "src/http-502.pug"
   ],
   "scripts": {
     "dev": "parcel",
