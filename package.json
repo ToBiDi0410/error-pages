@@ -9,13 +9,15 @@
   ],
   "scripts": {
     "dev": "parcel",
-    "build": "parcel build"
+    "build": "parcel build --public-url \"./\""
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "type": "commonjs",
   "devDependencies": {
+    "@parcel/optimizer-data-url": "^2.14.4",
+    "@parcel/transformer-inline-string": "^2.14.4",
     "@parcel/transformer-pug": "^2.14.4",
     "@tailwindcss/postcss": "^4.1.5",
     "parcel": "^2.14.4",
