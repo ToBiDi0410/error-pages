@@ -42,12 +42,10 @@ jobs:
 
     # Create release zip from error pages
     - name: Create release zip
-      run: |
-        zip -r error-pages.zip dist
+      run: zip -r error-pages.zip dist
 
     # Upload the release zip to the release
-    - name: Release
+    - name: Create release
       uses: softprops/action-gh-release@v2
-      if: github.ref_type == 'tag'
       with:
           files: error-pages.zip
