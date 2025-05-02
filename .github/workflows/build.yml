@@ -4,9 +4,9 @@ on:
   push:
     branches:
       - main  # or the branch you want to trigger on
-  pull_request:
-    branches:
-      - main  # or the branch you want to trigger on
+
+permissions:
+  contents: write
 
 jobs:
   build_and_deploy:
@@ -39,7 +39,6 @@ jobs:
       with:
         branch: gh-pages  # The branch you want to deploy to
         folder: dist  # The folder to deploy from
-        token: ${{ secrets.GITHUB_TOKEN }}
 
     # Create a release with the built dist folder as a zip file
     - name: Create GitHub Release
