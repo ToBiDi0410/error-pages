@@ -1,0 +1,9 @@
+- var code = 401;
+- var title = "Unauthorized!";
+- var description = "The request lacks valid authentication credentials";
+- var enduserReasons = ['Not logged in', 'Authentication session expired'];
+- var enduserAdvices = ['Log in with valid credentials', 'Refresh the session'];
+- var professionalReasons = ['Authentication token is invalid or expired', 'The server requires authentication for this resource'];
+- var professionalAdvices = ['Include a valid Authorization header', 'Renew expired authentication tokens'];
+- var img = "data-url:http-4XX.jpeg";
+include ../http-error.pug

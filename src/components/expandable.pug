@@ -1,0 +1,28 @@
+mixin expandable(title, id)
+  div(class="ExpandableComponent mx-auto w-full")
+    input(type="checkbox", class="hidden", id=id)
+    label(for=id class="flex items-center justify-between cursor-pointer space-x-2 text-orange-500 w-full")
+      span.font-semibold= title
+      span.arrow &#x2193;
+    .text-gray-700.expandable
+      block
+
+    style.
+      /* Default styles */
+      .expandable {
+        display: none
+      }
+
+      .ExpandableComponent .ExpandableComponent {
+        padding-left: 1rem;
+      }
+
+      /* When the checkbox is checked, show the expandable content */
+      input:checked ~ label ~ .expandable {
+        display: block
+      }
+
+      /* When the checkbox is checked, rotate the arrow icon */
+      input:checked ~ label .arrow {
+        transform: rotate(180deg)
+      }

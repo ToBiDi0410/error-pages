@@ -1,0 +1,9 @@
+- var code = 412;
+- var title = "Precondition Failed!";
+- var description = "A precondition in the request evaluated to false";
+- var enduserReasons = ['The request conditions are not fulfilled'];
+- var enduserAdvices = ['Avoid concurrent edits or stale content'];
+- var professionalReasons = ['If-Match or If-Unmodified-Since headers do not match'];
+- var professionalAdvices = ['Update conditions to reflect the latest state'];
+- var img = "data-url:http-4XX.jpeg";
+include ../http-error.pug

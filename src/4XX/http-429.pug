@@ -1,0 +1,9 @@
+- var code = 429;
+- var title = "Too Many Requests!";
+- var description = "The user has sent too many requests in a given amount of time";
+- var enduserReasons = ['Requests are sent too quickly'];
+- var enduserAdvices = ['Reduce the frequency of actions'];
+- var professionalReasons = ['Rate limit has been exceeded'];
+- var professionalAdvices = ['Respect the Retry-After header and limit burst traffic'];
+- var img = "data-url:http-4XX.jpeg";
+include ../http-error.pug

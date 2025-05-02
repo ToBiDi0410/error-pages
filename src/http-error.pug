@@ -12,11 +12,33 @@ html(lang="en" class="w-full h-full")
         div(class="ErrorDetails flex-grow basis-0 flex flex-col min-w-64 min-h-64")
           div(class="ErrorCode text-7xl text-neutral-800 font-bold") #{code}
           div(class="ErrorText text-4xl text-neutral-800 font-bold mt-3") #{title}
-          div(class="AdditionalTooltip relative mt-1 group hidden w-fit")
-            span(class="AdditionalIcon cursor-pointer text-violet-500 italic text-sm") More details? 🛈
-            div(class="AdditionalContent absolute font-mono bottom-full mb-2 left-1/2 -translate-x-1/2 w-max max-w-xs px-3 py-2 bg-gray-700 text-white text-sm rounded opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none z-10")
-          div(class="ErrorDescription mt-6") #{description}
-          div(class="ReloadButton mt-6 px-4 py-2 bg-orange-400 text-white font-semibold rounded-xl w-fit uppercase hover:bg-orange-500",onclick=actionCode) #{actionText}
+          include components/expandable
+          div(class="ErrorDescription mt-2") #{description}
+          div.w-full.mt-2
+            +expandable('Help for Endusers', 'enduserHelp')
+              +expandable('What could be the reason for this?', 'enduserReasons')
+                ul.list-disc.pl-4
+                  each reason in enduserReasons
+                    li #{reason}
+              +expandable('What can I do about this?', 'enduserAdvices')
+                ul.list-disc.pl-4
+                  each advice in enduserAdvices
+                    li #{advice}
+          div.w-full.mt-1
+            +expandable('Help for Professionals', 'professionalHelp')
+              div.AdditionalWrapper.hidden
+                +expandable('Additiona error details', 'professionalAdditional')
+                  div(class="AdditionalContent italic")
+              +expandable('What could be the reason for this?', 'professionalReasons')
+                ul.list-disc.pl-4
+                  each reason in professionalReasons
+                    li #{reason}
+              +expandable('What can I do about this?', 'professionalAdvices')
+                ul.list-disc.pl-4
+                  each advice in professionalAdvices
+                    li #{advice}
+          if actionCode
+            div(class="ReloadButton mt-6 px-4 py-2 bg-orange-400 text-white font-semibold rounded-xl w-fit uppercase hover:bg-orange-500",onclick=actionCode) #{actionText}
     script.
         const caddyError = [
           '{{placeholder "http.error.message"}}',
@@ -27,7 +49,7 @@ html(lang="en" class="w-full h-full")
         const additional = caddyError||additionalFromURL;
 
         if(additional) {
-          document.querySelector('.AdditionalTooltip').classList.add('lg:block');
+          document.querySelector('.AdditionalWrapper').classList.add("!block");
           document.querySelector('.AdditionalContent').innerText = additional;
         }
     style.
