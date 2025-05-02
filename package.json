@@ -3,8 +3,9 @@
   "version": "1.0.0",
   "description": "",
   "source": [
-    "src/404.pug",
+    "src/400.pug",
     "src/401.pug",
+    "src/404.pug",
     "src/502.pug"
   ],
   "scripts": {
