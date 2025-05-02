@@ -40,15 +40,14 @@ jobs:
         branch: gh-pages  # The branch you want to deploy to
         folder: dist  # The folder to deploy from
 
-    # Create a release with the built dist folder as a zip file
-    - name: Create GitHub Release
-      id: create_release
+    # Create release zip from error pages
+    - name: Create release zip
       run: |
-        VERSION=$(date +'%Y-%m-%d-%H-%M-%S')  # You can customize the versioning scheme
-        gh release create "v$VERSION" dist/* --title "Release $VERSION" --notes "Automated release of error pages"
+        zip -r error-pages.zip dist
 
-    # Upload the dist folder as a zip file to the release
-    - name: Upload release zip
-      run: |
-        zip -r dist.zip dist
-        gh release upload "v$VERSION" dist.zip --clobber
+    # Upload the release zip to the release
+    - name: Release
+      uses: softprops/action-gh-release@v2
+      if: github.ref_type == 'tag'
+      with:
+          files: error-pages.zip
