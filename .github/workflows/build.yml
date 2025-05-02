@@ -49,4 +49,4 @@ jobs:
       uses: softprops/action-gh-release@v2
       with:
           files: error-pages.zip
-          tag: "{{ github.sha }}"
+          tag_name: "{{ github.sha }}"
