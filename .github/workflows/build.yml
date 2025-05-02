@@ -39,14 +39,3 @@ jobs:
       with:
         branch: gh-pages  # The branch you want to deploy to
         folder: dist  # The folder to deploy from
-
-    # Create release zip from error pages
-    - name: Create release zip
-      run: zip -r error-pages.zip dist
-
-    # Upload the release zip to the release
-    - name: Create release
-      uses: softprops/action-gh-release@v2
-      with:
-          files: error-pages.zip
-          tag_name: "{{ github.sha }}"

@@ -13,4 +13,6 @@ Here's a list of all available error pages and their demo links:
 | `401`      | `401.html`     | Unauthorized                             | [Demo 401](https://tobidi0410.github.io/error-pages/http-401.html) |
 | `404`      | `404.html`     | Page Not Found                           | [Demo 404](https://tobidi0410.github.io/error-pages/http-404.html) |
 | `502`      | `502.html`     | Bad Gateway                              | [Demo 502](https://tobidi0410.github.io/error-pages/http-502.html) |
+
+Download from GitHub Pages Branch: [Download](https://github.com/ToBiDi0410/error-pages/archive/refs/heads/gh-pages.zip)
 ---
