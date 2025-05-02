@@ -1,0 +1,53 @@
+name: Build and Deploy Error Pages
+
+on:
+  push:
+    branches:
+      - main  # or the branch you want to trigger on
+  pull_request:
+    branches:
+      - main  # or the branch you want to trigger on
+
+jobs:
+  build_and_deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+    # Checkout the repository
+    - name: Checkout code
+      uses: actions/checkout@v3
+
+    # Set up Node.js environment
+    - name: Set up Node.js
+      uses: actions/setup-node@v3
+      with:
+        node-version: '16'  # or the version you are using
+
+    # Install dependencies
+    - name: Install dependencies
+      run: npm install
+
+    # Build the error pages using Parcel
+    - name: Build error pages
+      run: npm run build
+
+    # Deploy to GitHub Pages
+    - name: Deploy to GitHub Pages
+      uses: JamesIves/github-pages-deploy-action@v4
+      with:
+        branch: gh-pages  # The branch you want to deploy to
+        folder: dist  # The folder to deploy from
+        token: ${{ secrets.GITHUB_TOKEN }}
+
+    # Create a release with the built dist folder as a zip file
+    - name: Create GitHub Release
+      id: create_release
+      run: |
+        VERSION=$(date +'%Y-%m-%d-%H-%M-%S')  # You can customize the versioning scheme
+        gh release create "v$VERSION" dist/* --title "Release $VERSION" --notes "Automated release of error pages"
+
+    # Upload the dist folder as a zip file to the release
+    - name: Upload release zip
+      run: |
+        zip -r dist.zip dist
+        gh release upload "v$VERSION" dist.zip --clobber

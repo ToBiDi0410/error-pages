@@ -1,0 +1,34 @@
+doctype html
+html(lang="en" class="w-full h-full")
+  head
+    meta(charset="utf-8")
+    meta(name="viewport" content="width=device-width, initial-scale=1.0")
+    title #{code} | #{title}
+  body(class="w-full h-full")
+    div(class="PageContent flex flex-col flex-wrap items-center justify-center w-full h-full p-16")
+      div(class="ErrorContainer flex flex-row flex-wrap items-center")
+        div(class="ErrorIllustration flex-grow basis-0 flex flex-col items-center")
+          img(src=img class="w-64 h-64 min-w-64 min-h-64 rounded-xl")
+        div(class="ErrorDetails flex-grow basis-0 flex flex-col min-w-64 min-h-64")
+          div(class="ErrorCode text-7xl text-neutral-800 font-bold") #{code}
+          div(class="ErrorText text-4xl text-neutral-800 font-bold mt-3") #{title}
+          div(class="AdditionalTooltip relative mt-1 group hidden w-fit")
+            span(class="AdditionalIcon cursor-pointer text-violet-500 italic text-sm") More details? 🛈
+            div(class="AdditionalContent absolute font-mono bottom-full mb-2 left-1/2 -translate-x-1/2 w-max max-w-xs px-3 py-2 bg-gray-700 text-white text-sm rounded opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none z-10")
+          div(class="ErrorDescription mt-6") #{description}
+          div(class="ReloadButton mt-6 px-4 py-2 bg-orange-400 text-white font-semibold rounded-xl w-fit uppercase hover:bg-orange-500",onclick=actionCode) #{actionText}
+    script.
+        const caddyError = [
+          '{{placeholder "http.error.message"}}',
+          '{{placeholder "http.reverse_proxy.status_text"}}',
+          '{{placeholder "http.error.status_message"}}'
+        ].find(a => a!='' && !a.includes("placeholder"));
+        const additionalFromURL = new URLSearchParams(window.location.search).get("additional");
+        const additional = caddyError||additionalFromURL;
+
+        if(additional) {
+          document.querySelector('.AdditionalTooltip').classList.add('lg:block');
+          document.querySelector('.AdditionalContent').innerText = additional;
+        }
+    style.
+      @import "tailwindcss";
