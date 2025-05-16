@@ -1,0 +1,24 @@
+include ./composed/http-400-icon
+include ./composed/http-401-icon
+include ./composed/http-402-icon
+include ./composed/http-403-icon
+include ./composed/http-404-icon
+include ./composed/http-405-icon
+include ./composed/http-generic-icon
+
+mixin HTTPIcon(code)
+    div(class="HTTPIcon w-48 h-48 relative")
+        if(code == 400)
+            +HTTP400Icon()
+        else if(code == 401)
+            +HTTP401Icon()
+        else if(code == 402)
+            +HTTP402Icon()
+        else if(code == 403)
+            +HTTP403Icon()
+        else if(code == 404)
+            +HTTP404Icon()
+        else if(code == 405)
+            +HTTP405Icon()
+        else
+            +HTTPGenericIcon()

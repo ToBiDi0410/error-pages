@@ -20,6 +20,7 @@
     "@parcel/transformer-pug": "^2.14.4",
     "@tailwindcss/postcss": "^4.1.5",
     "parcel": "^2.14.4",
+    "svgo": "^3.3.2",
     "tailwindcss": "^4.1.5"
   }
 }

@@ -33,6 +33,12 @@ jobs:
         PARCEL_WORKER_BACKEND: process
       run: npm run build
 
+    # Move pages into root of build folder
+    - name: Move pages
+      run: |
+        mv dist/4XX/*.html ./
+        mv dist/5XX/*.html ./
+
     # Deploy to GitHub Pages
     - name: Deploy to GitHub Pages
       uses: JamesIves/github-pages-deploy-action@v4
