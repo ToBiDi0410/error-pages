@@ -7,7 +7,9 @@
 ## 📁 Download
 Download the latest bundle from GitHub Pages Branch: [Download as ZIP](https://github.com/ToBiDi0410/error-pages/archive/refs/heads/gh-pages.zip)
 
----
+
+## 🛠 Usage
+- [How to use in Caddy](./CADDY.md)
 
 ## 🌐 Available Pages & Demo
 Here's a list of all available error pages and their demo links:
