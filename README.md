@@ -1,6 +1,7 @@
 # ✨ Prebuilt HTTP Error Pages
 
-**Beautiful, ready-to-use error pages** – precompiled and published automatically. 
+**Elegantly crafted, production-ready error pages** — beautifully designed and effortlessly deployable.  
+Fully precompiled for seamless integration, compatible even with non-JavaScript browsers, and simple to serve in a single response.
 
 ---
 
@@ -9,7 +10,7 @@ Download the latest bundle from the GitHub Pages Branch: [Download ZIP](https://
 
 
 ## 🛠 Usage
-- [How to use in Caddy](./CADDY.md)
+- [How to use with Caddy](./CADDY.md)
 
 ## 🌐 Available Pages & Demo
 Below is a list of all available error pages with demo links:
@@ -47,19 +48,21 @@ Below is a list of all available error pages with demo links:
 | `428`      | `428.html` | Precondition Required           | [Demo 428](https://tobidi0410.github.io/error-pages/http-428.html) |      ❌      |
 | `429`      | `429.html` | Too Many Requests               | [Demo 429](https://tobidi0410.github.io/error-pages/http-429.html) |      ❌      |
 | `430`      | `430.html` | Unassigned                      | [Demo 430](https://tobidi0410.github.io/error-pages/http-430.html) |      ❌      |
-| `500`      | `500.html` | Internal Server Error           | [Demo 500](https://tobidi0410.github.io/error-pages/http-500.html) |      ❌      |
-| `501`      | `501.html` | Not Implemented                 | [Demo 501](https://tobidi0410.github.io/error-pages/http-501.html) |      ❌      |
-| `502`      | `502.html` | Bad Gateway                     | [Demo 502](https://tobidi0410.github.io/error-pages/http-502.html) |      ❌      |
-| `503`      | `503.html` | Service Unavailable             | [Demo 503](https://tobidi0410.github.io/error-pages/http-503.html) |      ❌      |
-| `504`      | `504.html` | Gateway Timeout                 | [Demo 504](https://tobidi0410.github.io/error-pages/http-504.html) |      ❌      |
-| `505`      | `505.html` | HTTP Version Not Supported      | [Demo 505](https://tobidi0410.github.io/error-pages/http-505.html) |      ❌      |
-| `506`      | `506.html` | Variant Also Negotiates         | [Demo 506](https://tobidi0410.github.io/error-pages/http-506.html) |      ❌      |
-| `507`      | `507.html` | Insufficient Storage            | [Demo 507](https://tobidi0410.github.io/error-pages/http-507.html) |      ❌      |
-| `508`      | `508.html` | Loop Detected                   | [Demo 508](https://tobidi0410.github.io/error-pages/http-508.html) |      ❌      |
-| `509`      | `509.html` | Bandwidth Limit Exceeded        | [Demo 509](https://tobidi0410.github.io/error-pages/http-509.html) |      ❌      |
+| `500`      | `500.html` | Internal Server Error           | [Demo 500](https://tobidi0410.github.io/error-pages/http-500.html) |      ✅      |
+| `501`      | `501.html` | Not Implemented                 | [Demo 501](https://tobidi0410.github.io/error-pages/http-501.html) |      ✅      |
+| `502`      | `502.html` | Bad Gateway                     | [Demo 502](https://tobidi0410.github.io/error-pages/http-502.html) |      ✅      |
+| `503`      | `503.html` | Service Unavailable             | [Demo 503](https://tobidi0410.github.io/error-pages/http-503.html) |      ✅      |
+| `504`      | `504.html` | Gateway Timeout                 | [Demo 504](https://tobidi0410.github.io/error-pages/http-504.html) |      ✅      |
+| `505`      | `505.html` | HTTP Version Not Supported      | [Demo 505](https://tobidi0410.github.io/error-pages/http-505.html) |      ✅      |
+| `506`      | `506.html` | Variant Also Negotiates         | [Demo 506](https://tobidi0410.github.io/error-pages/http-506.html) |      ✅      |
+| `507`      | `507.html` | Insufficient Storage            | [Demo 507](https://tobidi0410.github.io/error-pages/http-507.html) |      ✅      |
+| `508`      | `508.html` | Loop Detected                   | [Demo 508](https://tobidi0410.github.io/error-pages/http-508.html) |      ✅      |
+| `509`      | `509.html` | Bandwidth Limit Exceeded        | [Demo 509](https://tobidi0410.github.io/error-pages/http-509.html) |      ✅      |
 | `510`      | `510.html` | Not Extended                    | [Demo 510](https://tobidi0410.github.io/error-pages/http-510.html) |      ❌      |
-| `511`      | `511.html` | Network Authentication Required | [Demo 511](https://tobidi0410.github.io/error-pages/http-511.html) |      ❌      |
+| `511`      | `511.html` | Network Authentication Required | [Demo 511](https://tobidi0410.github.io/error-pages/http-511.html) |      ✅      |
 
+✅: Icon present   
+❌: No icon present (generic icon)
 ---
 
 ## 📝 License & Attribution

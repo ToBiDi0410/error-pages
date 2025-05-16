@@ -1,3 +1,5 @@
+include ./composed/http-4XX-icon
+include ./composed/http-5XX-icon
 include ./composed/http-400-icon
 include ./composed/http-401-icon
 include ./composed/http-402-icon
@@ -5,10 +7,20 @@ include ./composed/http-403-icon
 include ./composed/http-404-icon
 include ./composed/http-405-icon
 include ./composed/http-418-icon
-include ./composed/http-generic-icon
+include ./composed/http-500-icon
+include ./composed/http-501-icon
+include ./composed/http-502-icon
+include ./composed/http-503-icon
+include ./composed/http-504-icon
+include ./composed/http-505-icon
+include ./composed/http-506-icon
+include ./composed/http-507-icon
+include ./composed/http-508-icon
+include ./composed/http-509-icon
+include ./composed/http-511-icon
 
 mixin HTTPIcon(code)
-    div(class="HTTPIcon w-48 h-48 relative")
+    div(class="HTTPIcon w-48 h-48 relative overflow-hidden",data-code=code)
         if(code == 400)
             +HTTP400Icon()
         else if(code == 401)
@@ -23,5 +35,29 @@ mixin HTTPIcon(code)
             +HTTP405Icon()
         else if(code == 418)
             +HTTP418Icon()
+        else if(code == 500)
+            +HTTP500Icon()
+        else if(code == 501)
+            +HTTP501Icon()
+        else if(code == 502)
+            +HTTP502Icon()
+        else if(code == 503)
+            +HTTP503Icon()
+        else if(code == 504)
+            +HTTP504Icon()
+        else if(code == 505)
+            +HTTP505Icon()
+        else if(code == 506)
+            +HTTP506Icon()
+        else if(code == 507)
+            +HTTP507Icon()
+        else if(code == 508)
+            +HTTP508Icon()
+        else if(code == 509)
+            +HTTP509Icon()
+        else if(code == 511)
+            +HTTP511Icon()
+        else if(code > 499)
+            +HTTP5XXIcon()
         else
-            +HTTPGenericIcon()
+            +HTTP4XXIcon()

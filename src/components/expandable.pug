@@ -4,7 +4,7 @@ mixin expandable(title, id)
     label(for=id class="flex items-center justify-between cursor-pointer space-x-2 text-orange-500 w-full")
       span.font-semibold= title
       span.arrow &#x2193;
-    .text-gray-700.expandable
+    div(class="text-neutral-700 dark:text-neutral-300 expandable")
       block
 
     style.

@@ -1,4 +1,4 @@
-# How to use in Caddy
+# How to use with Caddy
 
 This setup allows you to serve **custom error pages** in your Caddy server configuration using reusable **snippets** for both:
 
