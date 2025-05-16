@@ -2,14 +2,14 @@
 
 This setup allows you to serve **custom error pages** in your Caddy server configuration using reusable **snippets** for both:
 
-- **Upstream response errors** (e.g. Not found errors)
+- **Upstream response errors** (e.g. Not Found errors)
 - **General proxy/server errors** (e.g. Caddy-level issues)
 
 ## 📁 Error Pages
-Download the ZIP from [README.md](./README.md) and extract all html files into /errors (or anyo ther directory)
+Download the ZIP file mentioned in README.md and extract all HTML files into /errors (or any other directory).
 
 ## 📦 Snippets
-Add the following two snippets at the top of your `Caddyfile`:
+Add the following two snippets near the top of your `Caddyfile`, before any site blocks:
 
 ```caddyfile
 (upstream_error_handler) {
@@ -40,10 +40,10 @@ Add the following imports into your `handler` or `reverse_proxy` blocks
 
 ```caddyfile
 example.com {
-    import proxy_error_handler # Handles errors caused by the proxy (e.g. includes 501)
+    import proxy_error_handler # Handles errors caused by the proxy (e.g. 501)
 
     reverse_proxy http://localhost:8080 {
-        import upstream_error_handler # Handles errors caused / returned from upstream
+        import upstream_error_handler # Handles errors returned from the upstream server
     }
 }
 ```
