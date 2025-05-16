@@ -36,8 +36,8 @@ jobs:
     # Move pages into root of build folder
     - name: Move pages
       run: |
-        mv dist/4XX/*.html ./
-        mv dist/5XX/*.html ./
+        mv dist/4XX/*.html dist/
+        mv dist/5XX/*.html dist/
 
     # Deploy to GitHub Pages
     - name: Deploy to GitHub Pages

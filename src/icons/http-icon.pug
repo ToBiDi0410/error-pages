@@ -4,6 +4,7 @@ include ./composed/http-402-icon
 include ./composed/http-403-icon
 include ./composed/http-404-icon
 include ./composed/http-405-icon
+include ./composed/http-418-icon
 include ./composed/http-generic-icon
 
 mixin HTTPIcon(code)
@@ -20,5 +21,7 @@ mixin HTTPIcon(code)
             +HTTP404Icon()
         else if(code == 405)
             +HTTP405Icon()
+        else if(code == 418)
+            +HTTP418Icon()
         else
             +HTTPGenericIcon()
