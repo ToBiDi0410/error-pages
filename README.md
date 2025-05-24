@@ -67,7 +67,6 @@ Below is a list of all available error pages with demo links:
 
 ## 📝 License & Attribution
 - [Twemoji](https://github.com/twitter/twemoji) — by Twitter — [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/)
-- [Fluent System Icons](https://github.com/microsoft/fluentui-system-icons) — by Microsoft — [MIT](https://opensource.org/licenses/MIT)
 - [Tailwind CSS](https://github.com/tailwindlabs/tailwindcss) — by Tailwind Labs — [MIT](https://opensource.org/licenses/MIT)
 
 ## 🤖 AI Disclaimer
