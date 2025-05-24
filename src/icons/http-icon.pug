@@ -6,7 +6,11 @@ include ./composed/http-402-icon
 include ./composed/http-403-icon
 include ./composed/http-404-icon
 include ./composed/http-405-icon
+include ./composed/http-414-icon
 include ./composed/http-418-icon
+include ./composed/http-419-icon
+include ./composed/http-423-icon
+include ./composed/http-429-icon
 include ./composed/http-500-icon
 include ./composed/http-501-icon
 include ./composed/http-502-icon
@@ -33,8 +37,16 @@ mixin HTTPIcon(code)
             +HTTP404Icon()
         else if(code == 405)
             +HTTP405Icon()
+        else if(code == 414)
+            +HTTP414Icon()
         else if(code == 418)
             +HTTP418Icon()
+        else if(code == 419)
+            +HTTP419Icon()
+        else if(code == 423)
+            +HTTP423Icon()
+        else if(code == 429)
+            +HTTP429Icon()
         else if(code == 500)
             +HTTP500Icon()
         else if(code == 501)

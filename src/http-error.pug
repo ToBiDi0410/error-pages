@@ -10,9 +10,7 @@ html(lang="en" class="w-full h-full")
         div(class="ErrorIllustration flex-grow basis-0 flex flex-col items-center")
           include icons/http-icon
           +HTTPIcon(code)
-          //img(src=img class="w-64 h-64 min-w-64 min-h-64 rounded-xl")
-          //object(type="image/svg+xml",data=img)
-        div(class="ErrorDetails flex-grow basis-0 flex flex-col min-w-64 min-h-64")
+        div(class="ErrorDetails flex-grow basis-0 flex flex-col")
           div(class="ErrorCode text-7xl text-neutral-800 dark:text-neutral-300 font-bold") #{code}
           div(class="ErrorText text-4xl text-neutral-800 dark:text-neutral-300 font-bold mt-3") #{title}
           include components/expandable

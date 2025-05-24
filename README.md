@@ -31,23 +31,22 @@ Below is a list of all available error pages with demo links:
 | `411`      | `411.html` | Length Required                 | [Demo 411](https://tobidi0410.github.io/error-pages/http-411.html) |      ❌      |
 | `412`      | `412.html` | Precondition Failed             | [Demo 412](https://tobidi0410.github.io/error-pages/http-412.html) |      ❌      |
 | `413`      | `413.html` | Payload Too Large               | [Demo 413](https://tobidi0410.github.io/error-pages/http-413.html) |      ❌      |
-| `414`      | `414.html` | URI Too Long                    | [Demo 414](https://tobidi0410.github.io/error-pages/http-414.html) |      ❌      |
+| `414`      | `414.html` | URI Too Long                    | [Demo 414](https://tobidi0410.github.io/error-pages/http-414.html) |      ✅      |
 | `415`      | `415.html` | Unsupported Media Type          | [Demo 415](https://tobidi0410.github.io/error-pages/http-415.html) |      ❌      |
 | `416`      | `416.html` | Range Not Satisfiable           | [Demo 416](https://tobidi0410.github.io/error-pages/http-416.html) |      ❌      |
 | `417`      | `417.html` | Expectation Failed              | [Demo 417](https://tobidi0410.github.io/error-pages/http-417.html) |      ❌      |
 | `418`      | `418.html` | I'm a teapot                    | [Demo 418](https://tobidi0410.github.io/error-pages/http-418.html) |      ✅      |
-| `419`      | `419.html` | Authentication Timeout          | [Demo 419](https://tobidi0410.github.io/error-pages/http-419.html) |      ❌      |
+| `419`      | `419.html` | Authentication Timeout          | [Demo 419](https://tobidi0410.github.io/error-pages/http-419.html) |      ✅      |
 | `420`      | `420.html` | Method Failure                  | [Demo 420](https://tobidi0410.github.io/error-pages/http-420.html) |      ❌      |
 | `421`      | `421.html` | Misdirected Request             | [Demo 421](https://tobidi0410.github.io/error-pages/http-421.html) |      ❌      |
 | `422`      | `422.html` | Unprocessable Entity            | [Demo 422](https://tobidi0410.github.io/error-pages/http-422.html) |      ❌      |
-| `423`      | `423.html` | Locked                          | [Demo 423](https://tobidi0410.github.io/error-pages/http-423.html) |      ❌      |
+| `423`      | `423.html` | Locked                          | [Demo 423](https://tobidi0410.github.io/error-pages/http-423.html) |      ✅      |
 | `424`      | `424.html` | Failed Dependency               | [Demo 424](https://tobidi0410.github.io/error-pages/http-424.html) |      ❌      |
 | `425`      | `425.html` | Too Early                       | [Demo 425](https://tobidi0410.github.io/error-pages/http-425.html) |      ❌      |
 | `426`      | `426.html` | Upgrade Required                | [Demo 426](https://tobidi0410.github.io/error-pages/http-426.html) |      ❌      |
-| `427`      | `427.html` | Unassigned                      | [Demo 427](https://tobidi0410.github.io/error-pages/http-427.html) |      ❌      |
 | `428`      | `428.html` | Precondition Required           | [Demo 428](https://tobidi0410.github.io/error-pages/http-428.html) |      ❌      |
-| `429`      | `429.html` | Too Many Requests               | [Demo 429](https://tobidi0410.github.io/error-pages/http-429.html) |      ❌      |
-| `430`      | `430.html` | Unassigned                      | [Demo 430](https://tobidi0410.github.io/error-pages/http-430.html) |      ❌      |
+| `429`      | `429.html` | Too Many Requests               | [Demo 429](https://tobidi0410.github.io/error-pages/http-429.html) |      ✅      |
+| `431`      | `431.html` | Request Header Fields Too Large | [Demo 431](https://tobidi0410.github.io/error-pages/http-431.html) |      ❌      |
 | `500`      | `500.html` | Internal Server Error           | [Demo 500](https://tobidi0410.github.io/error-pages/http-500.html) |      ✅      |
 | `501`      | `501.html` | Not Implemented                 | [Demo 501](https://tobidi0410.github.io/error-pages/http-501.html) |      ✅      |
 | `502`      | `502.html` | Bad Gateway                     | [Demo 502](https://tobidi0410.github.io/error-pages/http-502.html) |      ✅      |
